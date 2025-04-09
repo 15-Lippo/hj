@@ -1,0 +1,20 @@
+{
+  "name": "Lisprocoin",
+  "displayName": "Lisprocoin",
+  "appStoreUrl": "https://apps.apple.com/app/apple-store/id6443944476",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.uniswap.mobile",
+  "expo": {
+    "ios": {
+      "infoPlist": {
+        "CFBundleAllowMixedLocalizations": true
+      }
+    },
+    "plugins": [
+      "expo-localization",
+      "expo-camera",
+      "expo-local-authentication"
+    ],
+    "name": "Lisprocoin",
+    "slug": "lisprocoin"
+  }
+}

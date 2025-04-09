@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "public": true,
+  "buildCommand": "cd apps/web && yarn install && yarn build:production",
+  "outputDirectory": "apps/web/build",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=1, stale-while-revalidate"
+        }
+      ]
+    }
+  ],
+  "env": {
+    "SKIP_PREFLIGHT_CHECK": "true",
+    "DISABLE_ESLINT_PLUGIN": "true",
+    "CI": "false",
+    "GENERATE_SOURCEMAP": "false",
+    "NODE_ENV": "production"
+  }
+}

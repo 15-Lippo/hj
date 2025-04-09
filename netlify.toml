@@ -1,0 +1,14 @@
+[build]
+  base = "apps/web"
+  command = "yarn build:production"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "22.13.1"
+  YARN_VERSION = "3.2.3"
+  NPM_FLAGS = "--version"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
